@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Libre</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="shortcut icon" href="./images/mercadolibre-icono.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+
+        <div class="navbar">
+            <!-- NAVBAR RESPONSIVE -->
+            <div class="navbar-mobile">
+                <img id="logo-mobile" src="./images/menu.png" alt="logo">
+                <img id="menu-icon" src="images/menu.png" alt="menu">
+            </div>
+
+            <!-- MENÚ LATERAL -->
+            <div id="sidebar">
+                <div class="sidebar-header">
+                    <img src="images/close.png" id="close-sidebar">
+                    <h3>Menú</h3>
+                </div>
+
+                <ul class="sidebar-links">
+                    <li>Mi cuenta</li>
+                    <li>Mis compras</li>
+                    <li>Categorías</li>
+                    <li><a href="./ofertas.html">Ofertas</a></li>
+                    <li>Historial</li>
+                    <li>Ayuda</li>
+                </ul>
+            </div>
+
+            <div class="top-navbar">
+                <img src="./images/mercadolibre_logo.png" alt="logo de mercadolibre" id="logo-mercadolibre">
+                <div class="input-container">
+                    <input type="search" name="buscar" id="buscar" placeholder="Buscar productos, marcas y más...">
+                </div>
+                <img src="./images/imagen_compra.webp" alt="envio gratis foto" id="envio_gratis">
+            </div>
+            <div class="bottom-navbar">
+                <ul>
+                    <select name="" id="">
+                        <option value="argentina">Buenos Aires</option>
+                        <option value="china">Córdoba</option>
+                        <option value="china">Misiones</option>
+                        <option value="china">La Rioja</option>
+                        <option value="china">Mendoza</option>
+                        <option value="china">Chaco</option>
+                        <option value="china">Salta</option>
+                        <option value="china">Jujuy</option>
+                    </select>
+                    <li><a href="./categorias.html  ">Categorias</a></li>
+                    <li><a href="./ofertas.html">Ofertas</a></li>
+                    <li>Cupones</li>
+                    <li>Supermercado</li>
+                    <li>Moda</li>
+                    <li>Mercado Play</li>
+                    <li>Vender</li>
+                    <li>Ayuda</li>
+                </ul>
+                <ul>
+                    <li><a href="login.html" style="text-decoration: none; color: inherit;">Cuenta</a></li>
+                    <li>Favoritos</li>
+                    <li>Mis Compras</li>
+                    <li><img src="./images/carrito.png" alt="carrito de compras" id="carrito"></li>
+                </ul>
+            </div>
+        </div>
+        <div class="carrusel">
+            <img src="./images/carrusel/fondo1.png" alt="dia de la madre" id="imagen">
+            <button class="atras"><img src="./images/signo.png" alt="signo de menor"></button>
+            <button class="siguiente"><img src="./images/signo.png" alt="signo de mayor"></button>
+            <div class="indicadores">
+                <button class="dot actual"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="degrades"></div>
+        <div class="contenedor-items primer-seccion">
+            <div class="item">
+                <h3>Visto recientemente</h3>
+                <a href="producto.html?id=11">
+                    <img src="./images/main/dragonball.png" alt="paquete de cartas de Dragon Ball Z Kai">
+                </a>
+
+                <a href="producto.html?id=11">
+                    <p>Juego de cartas de Dragon Ball Z Kai</p>
+                    <span>$ 10.000</span>
+                </a>
+            </div>
+            <div class="item">
+                <h3>Medios de pago</h3>
+                <img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/dynamic-access-desktop/payment-methods.svg"
+                    alt="Imagen de cartera">
+                <p>Pagá tus compras de forma rápida y segura.</p>
+                <button>Conocer medios de pago</button>
+            </div>
+            <div class="item">
+                <h3>Menos de $20.000</h3>
+                <img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/dynamic-access-desktop/low-price-product.svg"
+                    alt="Foco de luz">
+                <p>Descubrí productos con precios bajos.</p>
+                <button>Mostrar Productos</button>
+            </div>
+            <div class="item">
+                <h3>Más vendidos</h3>
+                <img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/dynamic-access-desktop/top-sale.svg"
+                    alt="Icono de zapatilla">
+                <p>Explorá los productos que son tendencia.</p>
+                <button>Ir a Más vendidos</button>
+            </div>
+            <div class="item">
+                <h3>Compra protegida</h3>
+                <img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/dynamic-access-desktop/buy-protected.svg"
+                    alt="Icono de un sobre">
+                <p>Podés devolver tu compra gratis.</p>
+                <button>Cómo funciona</button>
+            </div>
+            <div class="item">
+                <h3>Tiendas oficiales</h3>
+                <img src="https://http2.mlstatic.com/frontend-assets/homes-palpatine/dynamic-access-desktop/store-official.svg"
+                    alt="Icono de tienda">
+                <p>Encontrá tus marcas preferidas.</p>
+                <button>Mostrar tiendas</button>
+            </div>
+        </div>
+        <div class="contenedor-items segunda-seccion">
+            <div class="item2 chevrolet">
+                <div class="item2-content">
+                    <img src="https://http2.mlstatic.com/D_NQ_661549-MLA93940509572_102025-OO.webp"
+                        alt="chevrolet logo">
+                </div>
+                <div class="item2-img">
+                    <img src="https://http2.mlstatic.com/D_NQ_812272-MLA93940509232_102025-OO.webp"
+                        alt="herramientas imagen">
+                </div>
+            </div>
+            <div class="item2 ford">
+                <div class="item2-content">
+                    <div class="item2-text">
+                        <h2>RANGER <br> TU NUEVA PICK UP</h2>
+                        <p>Ver más</p>
+                    </div>
+                </div>
+                <div class="item2-img">
+                    <img src="https://http2.mlstatic.com/D_NQ_741033-MLA91038916165_082025-OO.webp"
+                        alt="herramientas imagen">
+                </div>
+            </div>
+        </div>
+        <div class="tercera-seccion">
+            <div class="tercera-seccion-arriba">
+                <div class="publicidad">
+                    <img src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/meliplus/vdp/pill-meliplus.png"
+                        alt="meli+">
+                    <span>BENEFICIOS EXCLUSIVOS DESDE <span class="span-color">$ 3.490/MES</span></span>
+                </div>
+                <button>Suscribirme a Meli+</button>
+            </div>
+            <div class="tercera-seccion-abajo">
+                <div>
+                    <img src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/melimas/widget_home/benefits/box_desktop@2x.png"
+                        alt="imagen de una caja">
+                    <p>Envíos gratis en productos desde $ 15.000</p>
+                    <div class="linea-rosa"></div>
+                </div>
+                <div>
+                    <img src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/melimas/widget_home/benefits/partners-desktop@2x.png"
+                        alt="imagen de aplicaciones">
+                    <p>Las mejores plataformas de entretenimiento</p>
+                    <div class="linea-rosa linea2"></div>
+                </div>
+                <div>
+                    <img src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/melimas/widget_home/benefits/mla_cuotas_installments_desktop@2x.png"
+                        alt="imagen de una caja">
+                    <p>Hasta 3 cuotas extra en tus compras</p>
+                    <div class="linea-rosa linea3"></div>
+                </div>
+                <div>
+                    <img src="https://http2.mlstatic.com/resources/frontend/statics/loyal/partners/partners/melimas/widget_home/benefits/delivery-desktop@2x.png"
+                        alt="imagen de una caja">
+                    <p>Envíos gratis en pedidos de "Restaurantes"</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="cuarta-seccion">
+            <div class="cuarta-seccion-content">
+                <div class="cuarta-seccion-text">
+                    <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/touchpoint_trailer/logo-mercado-play-v3.png"
+                        alt="Logo de Mercado Play">
+                    <h2>¡Series y Películas también en TV!</h2>
+                    <span>GRATIS</span>
+                    <button><a href="">Ir a Mercado Play</a></button>
+                </div>
+                <div class="cuarta-seccion-video">
+                    <video src="./source/video.mp4" autoplay loop muted></video>
+                </div>
+            </div>
+        </div>
+        <div class="quinta-seccion">
+            <div class="contenedor-quinta-seccion">
+                <div class="quinta-seccion-titulo">
+                    <h3>Más vendidos de la semana</h3>
+                </div>
+                <div class="quinta-seccion-elementos">
+
+                    <div class="quinta-seccion-elemento">
+                        <a href="producto.html?id=1">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_2X_646244-CBT91430388474_092025-V.webp"
+                                alt="tarjeta de video">
+                        </a>
+                        <div class="quinta-seccion-texto">
+                            <p><a href="producto.html?id=1">Tarjeta de video Nvidia RTX 4060 TI</a></p>
+                            <span>$ 326.543</span>
+                        </div>
+                    </div>
+
+                    <div class="quinta-seccion-elemento">
+                        <a href="producto.html?id=2">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_2X_679226-MLA93084314252_092025-T.webp"
+                                alt="máscara">
+                        </a>
+                        <div class="quinta-seccion-texto">
+                            <p><a href="producto.html?id=2">Máscara de la Purga con luces</a></p>
+                            <span>$ 12.478</span>
+                        </div>
+                    </div>
+
+                    <div class="quinta-seccion-elemento">
+                        <a href="producto.html?id=3">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_2X_937737-MLA96137773911_102025-AB.webp"
+                                alt="procesador">
+                        </a>
+                        <div class="quinta-seccion-texto">
+                            <p><a href="producto.html?id=3">Procesador Amd Ryzen 7 5700g</a></p>
+                            <span>$ 290.999</span>
+                            <span id="envio-gratis">Envío gratis</span>
+                        </div>
+                    </div>
+
+                    <div class="quinta-seccion-elemento">
+                        <a href="producto.html?id=4">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_2X_845119-MLA95676836550_102025-T.webp"
+                                alt="alfajor">
+                        </a>
+                        <div class="quinta-seccion-texto">
+                            <p><a href="producto.html?id=4">Alfajor Rasta Chocolate Negro Caja</a></p>
+                            <span>$ 16.800</span>
+                        </div>
+                    </div>
+
+                    <div class="quinta-seccion-elemento">
+                        <a href="producto.html?id=5">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_2X_900968-MLA94805217128_102025-T.webp"
+                                alt="luces">
+                        </a>
+                        <div class="quinta-seccion-texto">
+                            <p><a href="producto.html?id=5">Luces De Navidad y Decorativas</a></p>
+                            <span>$ 14.241</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contenedor-quinta-seccion segunda-parte">
+                <div class="quinta-seccion-elementos">
+                    <div class="quinta-seccion-elemento">
+                        <a href="producto.html?id=6">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_2X_627230-MLA89145742949_082025-T.webp"
+                                alt="Dinosaurio">
+                        </a>
+                        <div class="quinta-seccion-texto">
+                            <p><a href="producto.html?id=6">Disfraz Inflable Dinosaurio Trex</a></p>
+                            <span>$ 113.063</span>
+                            <span id="envio-gratis">Envío gratis</span>
+                        </div>
+                    </div>
+
+                    <div class="quinta-seccion-elemento">
+                        <a href="producto.html?id=7">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_2X_773593-MLA92177108064_092025-T.webp"
+                                alt="esqueleto">
+                        </a>
+                        <div class="quinta-seccion-texto">
+                            <p><a href="producto.html?id=7">Disfraz Esqueleto Halloween</a></p>
+                            <span>$ 19.999</span>
+                        </div>
+                    </div>
+
+                    <div class="quinta-seccion-elemento">
+                        <a href="producto.html?id=8">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_2X_858598-MLA89097990709_082025-T.webp"
+                                alt="spiderman">
+                        </a>
+                        <div class="quinta-seccion-texto">
+                            <p><a href="producto.html?id=8">Disfraz Hombre Araña Spiderman</a></p>
+                            <span>$ 14.999</span>
+                        </div>
+                    </div>
+
+                    <div class="quinta-seccion-elemento">
+                        <a href="producto.html?id=9">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_2X_731095-MLA95497815580_102025-T.webp"
+                                alt="caramelos">
+                        </a>
+                        <div class="quinta-seccion-texto">
+                            <p><a href="producto.html?id=9">Bon o Bon Bombones de Chocolate</a></p>
+                            <span>$ 12.000</span>
+                        </div>
+                    </div>
+
+                    <div class="quinta-seccion-elemento">
+                        <a href="producto.html?id=10">
+                            <img src="https://http2.mlstatic.com/D_Q_NP_2X_743825-MLA95637503001_102025-T.webp"
+                                alt="Decorativas">
+                        </a>
+                        <div class="quinta-seccion-texto">
+                            <p><a href="producto.html?id=10">Kit De Adornos De Navidad Esferas</a></p>
+                            <span>$ 35.699</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-top">
+            <div class="footer-item">
+                <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/payment.svg"
+                    alt="Pagos">
+                <h3>Elegí cómo pagar</h3>
+                <p>Podés pagar con tarjeta, débito, efectivo o con Cuotas sin Tarjeta.</p>
+                <a href="#">Cómo pagar tus compras</a>
+            </div>
+
+            <div class="footer-item">
+                <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/shipping.svg"
+                    alt="Envíos">
+                <h3>Envíos a todo el país</h3>
+                <p>Con Mercado Envíos tus compras llegan a tu casa.</p>
+                <a href="#">Conocé más sobre envíos</a>
+            </div>
+
+            <div class="footer-item">
+                <img src="https://http2.mlstatic.com/storage/homes-korriban/assets/images/ecosystem/protected.svg"
+                    alt="Seguridad">
+                <h3>Seguridad de punta</h3>
+                <p>Comprá con la tranquilidad de la protección al comprador.</p>
+                <a href="#">Cómo te protegemos</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 MercadoLibre — Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

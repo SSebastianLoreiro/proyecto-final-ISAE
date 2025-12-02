@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - Mercado Libre Clone</title>
+    <link rel="stylesheet" href="./styles/ofertas.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navbar-mobile">
+                <img id="logo-mobile" src="./images/menu.png" alt="logo">
+                <img id="menu-icon" src="images/menu.png" alt="menu">
+            </div>
+            <div class="top-navbar">
+                <a href="index.html"><img src="./images/mercadolibre_logo.png" alt="logo" id="logo-mercadolibre"></a>
+                <div class="input-container">
+                    <input type="search" placeholder="Buscar productos, marcas y más...">
+                </div>
+                <img src="./images/imagen_compra.webp" alt="envio gratis" id="envio_gratis">
+            </div>
+        </div>
+    </header>
+
+    <main class="main-ofertas">
+        <div class="ofertas-container">
+
+            <aside class="filtros-sidebar">
+                <h2>Ofertas</h2>
+                <p class="resultados-count">10.234 resultados</p>
+
+                <div class="filtro-grupo">
+                    <h3>Costo de envío</h3>
+                    <label><input type="checkbox"> Gratis (5.000)</label>
+                </div>
+
+                <div class="filtro-grupo">
+                    <h3>Precio</h3>
+                    <ul>
+                        <li><a href="#">Menos de $20.000</a></li>
+                        <li><a href="#">$20.000 a $50.000</a></li>
+                        <li><a href="#">Más de $50.000</a></li>
+                    </ul>
+                    <div class="precio-input">
+                        <input type="number" placeholder="Mín">
+                        <span>-</span>
+                        <input type="number" placeholder="Máx">
+                        <button>></button>
+                    </div>
+                </div>
+
+                <div class="filtro-grupo">
+                    <h3>Descuento</h3>
+                    <label><input type="radio" name="descuento"> Desde 10% off</label>
+                    <label><input type="radio" name="descuento"> Desde 30% off</label>
+                    <label><input type="radio" name="descuento"> Desde 50% off</label>
+                </div>
+            </aside>
+
+            <section class="lista-productos">
+                <a href="producto.html" class="card-oferta">
+                    <div class="img-container">
+                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_646244-CBT91430388474_092025-V.webp"
+                            alt="Producto">
+                    </div>
+                    <div class="info-container">
+                        <h3>Tarjeta de video Nvidia RTX 5070</h3>
+                        <div class="precio-row">
+                            <span class="precio-anterior">$ 500.000</span>
+                            <span class="descuento-tag">35% OFF</span>
+                        </div>
+                        <p class="precio-actual">$ 326.543</p>
+                        <p class="envio-full">Llega gratis mañana <span>FULL</span></p>
+                    </div>
+                </a>
+
+                <a href="producto.html" class="card-oferta">
+                    <div class="img-container">
+                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_937737-MLA96137773911_102025-AB.webp"
+                            alt="Producto">
+                    </div>
+                    <div class="info-container">
+                        <h3>Procesador AMD Ryzen 7 5700g</h3>
+                        <div class="precio-row">
+                            <span class="precio-anterior">$ 400.000</span>
+                            <span class="descuento-tag">25% OFF</span>
+                        </div>
+                        <p class="precio-actual">$ 290.999</p>
+                        <p class="envio-full">Llega gratis hoy <span>FULL</span></p>
+                    </div>
+                </a>
+
+                <a href="producto.html" class="card-oferta">
+                    <div class="img-container">
+                        <img src="https://http2.mlstatic.com/D_Q_NP_2X_737329-MLA95694771106_102025-T.webp"
+                            alt="Producto">
+                    </div>
+                    <div class="info-container">
+                        <h3>Alfajor Rasta Caja x 14</h3>
+                        <div class="precio-row">
+                            <span class="precio-anterior">$ 22.000</span>
+                            <span class="descuento-tag">15% OFF</span>
+                        </div>
+                        <p class="precio-actual">$ 18.200</p>
+                        <p class="envio-full">Envío gratis</p>
+                    </div>
+                </a>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

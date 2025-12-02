@@ -1,0 +1,122 @@
+/* =========================================
+   ESTILOS PÁGINA DE CATEGORÍAS
+   ========================================= */
+
+/* 1. Fondo general y espaciado */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.top-navbar {
+    background-color: #ffe600;
+}
+
+.main-categorias {
+    background-color: #ebebeb;
+    /* El gris clásico de fondo */
+    min-height: 100vh;
+    padding: 40px 0;
+    font-family: 'Proxima Nova', sans-serif;
+}
+
+/* 2. Título "Categorías" */
+.contenedor-categorias-titulo {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 30px auto;
+}
+
+.contenedor-categorias-titulo h1 {
+    font-size: 24px;
+    font-weight: 300;
+    /* Letra fina estilo ML */
+    color: #333;
+    margin: 0;
+}
+
+/* 3. La Grilla (La magia que ordena todo) */
+.grid-categorias {
+    display: grid;
+    /* Esto crea columnas automáticas que se ajustan al tamaño (min 160px) */
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 20px;
+    /* Espacio entre tarjetas */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 4. Las Tarjetas (Cajitas blancas) */
+.card-categoria {
+    background-color: #fff;
+    border-radius: 6px;
+    height: 180px;
+    /* Altura fija para que sean cuadradas/rectangulares uniformes */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centrado horizontal */
+    justify-content: center;
+    /* Centrado vertical */
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    transition: transform 0.2s, box-shadow 0.2s, color 0.2s;
+    text-decoration: none;
+    /* Sin subrayado */
+    color: #333;
+    /* Color de texto negro suave */
+    padding: 15px;
+    border: 1px solid transparent;
+    /* Para evitar saltos al hacer hover */
+}
+
+/* Efecto al pasar el mouse */
+.card-categoria:hover {
+    transform: translateY(-5px);
+    /* Se levanta un poquito */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* Más sombra */
+    color: #3483fa;
+    /* El texto se pone azul */
+}
+
+/* 5. Los Íconos (Emojis o imágenes) */
+.icono-cat {
+    font-size: 3rem;
+    /* Hacemos los emojis grandes */
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* 6. Texto de la categoría */
+.card-categoria p {
+    font-size: 16px;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* --- RESPONSIVE (Celulares) --- */
+@media (max-width: 600px) {
+    .grid-categorias {
+        /* En celulares forzamos 2 columnas para que no quede una lista eterna */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        width: 95%;
+    }
+
+    .card-categoria {
+        height: 150px;
+        /* Un poco más chicas en altura */
+    }
+
+    .icono-cat {
+        font-size: 2.5rem;
+    }
+
+    .contenedor-categorias-titulo h1 {
+        font-size: 20px;
+        margin-left: 10px;
+    }
+}
