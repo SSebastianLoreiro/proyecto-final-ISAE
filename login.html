@@ -20,17 +20,25 @@
     </header>
 
     <main class="main-login">
-        <div class="login-box">
-            <h1>¡Hola! Ingresá tu teléfono, e-mail o usuario</h1>
+        <!-- FORMULARIO DE LOGIN -->
+        <div class="login-box" id="login-box">
+            <h1>¡Hola! Ingresá tu e-mail</h1>
 
-            <form action="">
+            <form id="login-form">
                 <div class="input-group">
-                    <label for="email">Teléfono, e-mail o usuario</label>
-                    <input type="text" id="email" autofocus>
+                    <label for="login-email">E-mail</label>
+                    <input type="email" id="login-email" required autofocus>
                 </div>
 
-                <button type="button" class="btn-continuar">Continuar</button>
-                <button type="button" class="btn-crear">Crear cuenta</button>
+                <div class="input-group">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" required>
+                </div>
+
+                <div class="error-message" id="login-error"></div>
+
+                <button type="submit" class="btn-continuar">Continuar</button>
+                <button type="button" class="btn-crear" id="go-register">Crear cuenta</button>
             </form>
 
             <div class="ayuda-link">
@@ -38,10 +46,101 @@
             </div>
         </div>
 
+        <!-- FORMULARIO DE REGISTRO -->
+        <div class="login-box" id="register-box" style="display: none;">
+            <h1>Crea tu cuenta</h1>
+
+            <form id="register-form">
+                <div class="input-group">
+                    <label for="register-email">E-mail</label>
+                    <input type="email" id="register-email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="register-password">Contraseña</label>
+                    <input type="password" id="register-password" required minlength="6">
+                </div>
+
+                <div class="input-group">
+                    <label for="register-confirm">Confirmar contraseña</label>
+                    <input type="password" id="register-confirm" required minlength="6">
+                </div>
+
+                <div class="error-message" id="register-error"></div>
+                <div class="success-message" id="register-success"></div>
+
+                <button type="submit" class="btn-continuar">Registrarse</button>
+                <button type="button" class="btn-crear" id="go-login">Ya tengo cuenta</button>
+            </form>
+        </div>
+
         <div class="footer-login">
             <p>Protegido por reCAPTCHA - <a href="#">Privacidad</a> - <a href="#">Condiciones</a></p>
         </div>
     </main>
+
+    <script src="./js/auth.js"></script>
+    <script>
+        const loginBox = document.getElementById('login-box');
+        const registerBox = document.getElementById('register-box');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        document.getElementById('go-register').addEventListener('click', () => {
+            loginBox.style.display = 'none';
+            registerBox.style.display = 'block';
+        });
+
+        document.getElementById('go-login').addEventListener('click', () => {
+            registerBox.style.display = 'none';
+            loginBox.style.display = 'block';
+        });
+
+        loginForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value.trim();
+            const password = document.getElementById('login-password').value;
+            const errorEl = document.getElementById('login-error');
+            errorEl.textContent = '';
+
+            try {
+                await login(email, password);
+                window.location.href = 'index.html';
+            } catch (err) {
+                errorEl.textContent = err.message;
+            }
+        });
+
+        registerForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('register-email').value.trim();
+            const password = document.getElementById('register-password').value;
+            const confirm = document.getElementById('register-confirm').value;
+            const errorEl = document.getElementById('register-error');
+            const successEl = document.getElementById('register-success');
+            errorEl.textContent = '';
+            successEl.textContent = '';
+
+            if (password !== confirm) {
+                errorEl.textContent = 'Las contraseñas no coinciden';
+                return;
+            }
+
+            try {
+                await register(email, password);
+                successEl.textContent = 'Cuenta creada. Redirigiendo...';
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 1500);
+            } catch (err) {
+                errorEl.textContent = err.message;
+            }
+        });
+
+        if (isLoggedIn()) {
+            window.location.href = 'index.html';
+        }
+    </script>
 
 </body>
 

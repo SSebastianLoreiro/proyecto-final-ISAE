@@ -65,7 +65,7 @@
                     <li>Ayuda</li>
                 </ul>
                 <ul>
-                    <li><a href="login.html" style="text-decoration: none; color: inherit;">Cuenta</a></li>
+                    <li id="nav-cuenta"><a href="login.html" style="text-decoration: none; color: inherit;">Cuenta</a></li>
                     <li>Favoritos</li>
                     <li>Mis Compras</li>
                     <li><img src="./images/carrito.png" alt="carrito de compras" id="carrito"></li>
@@ -369,7 +369,20 @@
         </div>
     </footer>
 
+    <script src="./js/auth.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        (function () {
+            const navCuenta = document.getElementById('nav-cuenta');
+            const user = getUser();
+            if (user) {
+                navCuenta.innerHTML = `
+                    <span style="font-size:13px; display:block; color:#333;">${user.email}</span>
+                    <a href="#" onclick="logout(); return false;" style="text-decoration:none; color:#3483fa; font-size:12px;">Cerrar sesión</a>
+                `;
+            }
+        })();
+    </script>
 </body>
 
 </html>

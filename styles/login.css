@@ -154,6 +154,21 @@ body {
     text-decoration: none;
 }
 
+/* Mensajes de error y éxito */
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-bottom: 16px;
+    min-height: 20px;
+}
+
+.success-message {
+    color: #27ae60;
+    font-size: 14px;
+    margin-bottom: 16px;
+    min-height: 20px;
+}
+
 /* Responsive Móvil */
 @media (max-width: 480px) {
     .main-login {
